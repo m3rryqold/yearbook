@@ -142,12 +142,68 @@ footer h4+ul li {
     font-style: italic;
 }
 */
+#first {
+    margin-top: 15px !important;
+}
+.out-wrapper{
+    padding: 15px 10px 5px;
+    background-color: #F4F4F4;
+}
+img{
+  /*width:70%;*/
+  height: 200px;
+}
+ol{
+  list-style-type: none;
+}
+li{
+    float: left;
+    margin: 5px 10px 4px;
+}
+ol li>div{
+    width: 220px;
+    height: 200px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+    position: relative;
+}
+.imageLoad + a.imageOver{
+    position: absolute;
+    padding: 20px;
+    opacity: 0;
+    background-color: #fff;
+    background-color: rgba(255,255,255,.96);
+    top: 0;
+    left:0;
+    width: 100%;
+    margin: 0;
+    font-size: 13px;
+    line-height: 2;
+    text-decoration: none;
+    overflow: hidden;
+    color:red;
+    box-sizing: border-box;
+    bottom: 30px;
 
+}
+.imageLoad +a span{
+    display: block;
+    line-height: 1.4;
+    font-size: 11px;
+    margin-right: 10px;
+}
+.imageLoad +a em{
+display: block;
+position: absolute;
+bottom: 10px;
+left:20px;
+font-size: 12px;
+line-height: 1;
+}
 
-
-
-
-.icon {
-    border-radius: 25px;
-    background-color: brown;
+div.contentImg:hover a.imageOver{
+opacity: 1;
+transition: opacity 250ms ease;
+cursor: pointer;
 }
