@@ -2,7 +2,7 @@
 //include database connection
 include ‘includes/connection.php’;
 //select the image
-$query = “SELECT detail FROM details WHERE  detail = id”;
+$query = "SELECT detail FROM details WHERE  detail = id";
 $stmt = $con->prepare( $query );
 //bind the id of the image you want to select
 $stmt->bindParam(1, $_GET['id']);
@@ -12,12 +12,12 @@ $num = $stmt->rowCount();
 if( $num ){
     //if found
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    
+
     //specify header with content type,
     //you can do header(“Content-type: image/jpg”); for jpg,
     //header(“Content-type: image/gif”); for gif, etc.
-    header(“Content-type: image/jpg”);
-    
+    header("Content-type: image/jpg");
+
     //display the image data
     echo 'images/'.$row['data'];
     exit;
